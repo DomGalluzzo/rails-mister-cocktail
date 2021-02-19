@@ -4,14 +4,16 @@
   <div class="row mt-4">
     <!-- Card -->
     <% @cocktails.each do |cocktail| %>
-
+      <% if cocktail.photo.attached? %>
+        <% image_path = cl_image_path cocktail.photo.key %>
+      <% else %>
+        <% image_path = 'https://picsum.photos/200' %>
+      <% end %>
+      
       <div class="col-xs-12 col-sm-4 py-2">
         <%= link_to cocktail_path(cocktail), class: "card-link" do %>
-          <div class="card">
-          <%= cl_image_tag cocktail.photo.key, width: 400, height: 300, crop: :fill %>
-            <div class="card-description">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('<%= image_path %>')">
               <%= cocktail.name %>
-            </div>
           </div>
         <% end %>
       </div>
