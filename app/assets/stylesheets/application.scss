@@ -12,17 +12,41 @@
 @import "components/index";
 @import "pages/index";
 @import "pages/show";
+@import "components/form";
+
+$white: #F7F9F7;
+$pink: #ef476f;
+
+$primary: 'Dancing Script', cursive;
+$secondary: 'Dosis', sans-serif;
+
+.navbar {
+  border-color: $pink;
+}
+
+.main-navbar-head {
+  font-family: $primary;
+}
+
+.create {
+  font-family: $primary;
+  font-size: 24px;
+}
+
+body {
+  background-color: $white;
+}
 
 .fa-glass-cheers {
   color: black;
     &:hover {
-      color: #ef476f;
+      color: $pink;
     }
 }
 
 
 .fa-glass-martini-alt:hover {
-  color: #ef476f;
+  color: $pink;
 }
 
 li {
@@ -37,5 +61,14 @@ li {
 }
 
 .fa-trash-alt {
-  color: #ef476f;
+  color: $pink;
+}
+
+.card {
+  font-family: $secondary;
+  &:hover {
+    font-family: $primary;
+    transform: scale(0.98);
+    transition-duration: 200ms;
+  }
 }

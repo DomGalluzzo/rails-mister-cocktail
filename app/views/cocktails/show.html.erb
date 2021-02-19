@@ -26,6 +26,7 @@
         </div>
 
         <div class="col-sm-12 col-lg-4">
+          <h4 class="mt-2 text-center">Ingredients:</h4>
             <% iterator = 1 %>
             <% @cocktail.doses.each do |dose| %>
               <li><%= iterator %>) <%= dose.ingredient.name %></p>

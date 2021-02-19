@@ -6,6 +6,8 @@
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <style>@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Dosis:wght@400&display=swap');</style>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -19,11 +21,11 @@
       <!-- Add button -->
     <div class="">
       <%= link_to new_cocktail_path do %>
-        <i class="fas fa-glass-cheers"> create</i>
+        <i class="fas fa-glass-cheers"> <span class="create">create</span></i>
       <% end %>
         
     </div>
-    <h3 class="text-center">Cocktails</h3>
+    <h3 class="text-center main-navbar-head">Cocktails</h3>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
