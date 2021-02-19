@@ -41,13 +41,18 @@ body {
   color: black;
     &:hover {
       color: $pink;
+      transform: scale(1.2);
+      transition: all 0.15s ease-in-out;
     }
 }
 
 
 .fa-glass-martini-alt:hover {
   color: $pink;
+  transform: scale(1.2);
+  transition: all 0.20s ease-in-out;
 }
+
 
 li {
   list-style: none;
@@ -66,9 +71,10 @@ li {
 
 .card {
   font-family: $secondary;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   &:hover {
     font-family: $primary;
     transform: scale(0.98);
-    transition-duration: 200ms;
+    transition: all 0.2s ease-in-out;
   }
 }
