@@ -9,12 +9,19 @@
           <%= link_to new_cocktail_dose_path(@cocktail) do %>
             <i class="far fa-plus-square fa-border fa-sm"></i>  
           <% end %>
-          <% image_path = cl_image_path @cocktail.photo.key %>
+
+          <% if @cocktail.photo.attached? %>
+            <% image_path = cl_image_path @cocktail.photo.key %>
+          <% else %>
+            <% image_path = 'https://picsum.photos/200/300?blur' %>
+          <% end %>
+
           <%= link_to "", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" }, class: "far fa-trash-alt fa-sm ml-1 mr-2" %>
           <div class="card-show p-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('<%= image_path %>')">
             <%= @cocktail.name %>
           </div>
         </div>
+
         <div class="col-sm-12 col-lg-2">
         </div>
 

@@ -1,5 +1,4 @@
 <div class="container pad20">
-
     <!-- Grid row -->
   <div class="row mt-4">
     <!-- Card -->
@@ -7,7 +6,8 @@
       <% if cocktail.photo.attached? %>
         <% image_path = cl_image_path cocktail.photo.key %>
       <% else %>
-        <% image_path = 'https://picsum.photos/200' %>
+        <% image_list = ['https://picsum.photos/200/300/?random=1', 'https://picsum.photos/200/300/?random=2' ,'https://picsum.photos/200/300/?random=3', 'https://picsum.photos/200/300/?random=4', 'https://picsum.photos/200/300/?random=5'] %>
+        <% image_path = image_list.sample %>
       <% end %>
       
       <div class="col-xs-12 col-sm-4 py-2">
