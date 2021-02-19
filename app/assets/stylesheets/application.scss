@@ -11,14 +11,15 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/show";
 
 .fa-glass-cheers {
   color: black;
+    &:hover {
+      color: #ef476f;
+    }
 }
 
-.fa-glass-cheers:hover {
-  color: #ef476f;
-}
 
 .fa-glass-martini-alt:hover {
   color: #ef476f;
@@ -30,6 +31,9 @@ li {
 
 .fa-plus-square {
   color: #26bd7e;
+    &:hover {
+      color: rgb(51, 128, 230)
+    }
 }
 
 .fa-trash-alt {
