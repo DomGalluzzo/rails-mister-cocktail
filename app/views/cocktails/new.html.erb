@@ -1,4 +1,1 @@
-<%= simple_form_for [@cocktail] do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "Save cocktail", class: "btn btn-primary" %>
-<% end %>
+<%= render 'form' cocktail: @cocktail %>

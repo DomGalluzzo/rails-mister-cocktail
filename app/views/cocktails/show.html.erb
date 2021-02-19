@@ -10,11 +10,7 @@
             <i class="far fa-plus-square fa-border fa-sm"></i>  
           <% end %>
           
-          <%= link_to "", cocktail_path(@cocktail),
-                method: :delete,
-                data: { confirm: "Are you sure?" },
-                class: "far fa-trash-alt fa-sm ml-1 mr-2"
-          %>
+          <%= link_to "", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" }, class: "far fa-trash-alt fa-sm ml-1 mr-2" %>
           <div class="card-show p-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
             <%= @cocktail.name %>
           </div>
