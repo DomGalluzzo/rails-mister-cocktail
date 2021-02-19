@@ -12,6 +12,24 @@
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon border border-shadow">
+    <%= link_to cocktails_path, class: "navbar-brand" do %>
+      <i class="fas fa-glass-martini-alt fa-border"></i>
+    <% end %>
+      <!-- Add button -->
+    <div class="">
+      <%= link_to new_cocktail_path do %>
+        <i class="fas fa-glass-cheers">create</i>
+      <% end %>
+        
+    </div>
+    <h3 class="text-center">Cocktails</h3>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    </div>
+
     <%= yield %>
   </body>
 </html>

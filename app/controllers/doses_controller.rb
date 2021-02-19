@@ -1,6 +1,6 @@
 class DosesController < ApplicationController
 
-  before_action :find_cocktail_id, only: %i[create new]
+  before_action :find_cocktail_id, only: %i[create new destroy]
 
   def index
     @doses = Dose.all

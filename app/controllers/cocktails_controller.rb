@@ -1,6 +1,6 @@
 class CocktailsController < ApplicationController
 
-  before_action :find_cocktail_id, only: %i[edit show update destroy]
+  before_action :find_cocktail_id, only: %i[edit show destroy]
 
   def index
     @cocktails = Cocktail.all
@@ -26,9 +26,6 @@ class CocktailsController < ApplicationController
   def show
   end
 
-  def update
-    @cocktail.update(cocktail_params)
-  end
 
   def destroy
     @cocktail.destroy
@@ -40,7 +37,6 @@ class CocktailsController < ApplicationController
   def find_cocktail_id
     @cocktail = Cocktail.find(params[:id])
   end
-  
 
   def cocktail_params
     params.require(:cocktail).permit(:name)

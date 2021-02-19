@@ -1,10 +1,26 @@
-<h2><%= @cocktail.name %></h2>
-<% @cocktail.doses.each do |dose| %>
-  <%= dose.description %>
-<% end %> 
-<%= link_to "Add dose",  new_cocktail_dose_path(@cocktail) %>
-<%= link_to "Go back to cocktails", cocktails_path %>
-<%= link_to "Delete dose", cocktail_path(@cocktail),
-      method: :delete,
-      data: { confirm: "Are you sure?" },
-      class: "btn btn-danger rounded" %>
+<div class="container p-2">
+  <div class="card-product">
+    <h2><%= @cocktail.name %>
+      <%= link_to new_cocktail_dose_path(@cocktail) do %>
+        <i class="far fa-plus-square fa-xs pl-2"></i>  
+      <% end %>
+
+      <%= link_to "", cocktail_path(@cocktail),
+            method: :delete,
+            data: { confirm: "Are you sure?" },
+            class: "far fa-trash-alt fa-xs pl-2" %>
+    
+    </h2>
+  </div>
+
+  <% iterator = 1 %>
+  <% @cocktail.doses.each do |dose| %>
+    <li><%= iterator %>) <strong><%= dose.ingredient.name %></strong></p>
+    <li><i class="fas fa-angle-double-right fa-xs"></i><%= dose.description %></p>
+    <% iterator +=1 %>
+  <% end %>
+
+
+
+
+</div>

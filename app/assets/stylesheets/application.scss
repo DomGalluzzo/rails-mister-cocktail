@@ -11,3 +11,27 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.fa-glass-cheers {
+  color: black;
+}
+
+.fa-glass-cheers:hover {
+  color: #ef476f;
+}
+
+.fa-glass-martini-alt:hover {
+  color: #ef476f;
+}
+
+li {
+  list-style: none;
+}
+
+.fa-plus-square {
+  color: #26bd7e;
+}
+
+.fa-trash-alt {
+  color: #ef476f;
+}
